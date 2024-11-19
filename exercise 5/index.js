@@ -6,10 +6,8 @@ let news = [
 
 function displayNews() {
     const newsContainer = document.getElementById('news-container');
-    // Clear existing news items
     newsContainer.innerHTML = '';
     
-    // Populate the container with the latest news
     news.forEach(item => {
         const newsItem = document.createElement('div');
         newsItem.classList.add('news-item');
@@ -28,8 +26,6 @@ function displayNews() {
     });
 }
 
-// Initial display when the page loads
 displayNews();
 
-// Refresh the news every 5 seconds
 setInterval(displayNews, 5000);
