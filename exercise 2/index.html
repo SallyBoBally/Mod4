@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab 2</title>
+    </head>
+<body>
+    <script>
+        function addCard(title, text) {
+            const template = document.getElementById("card-template")
+            .content.cloneNode(true);
+            
+            template.querySelector('.card-title').innerText = title;
+            template.querySelector('.card-text').innerText = text;
+            
+            document.querySelector('#card-list').appendChild(template);
+            }
+
+        addCard('Dynamic Card', 'Added card');
+    </script>        
+</body>
+</html>
