@@ -1,0 +1,17 @@
+.slider-box {
+    position: relative;
+    width: 100px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+.slider {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #ff0000;
+    border-radius: 5px;
+    transition: background-color 1s linear;
+}

@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Lab 2</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab2</title>
+</head>
 <body>
     <script>
         function addCard(title, text) {
-            const template = document.getElementById("card-template")
-            .content.cloneNode(true);
-            
+
+            const template = document.getElementById("card-template").content.cloneNode(true);
+
             template.querySelector('.card-title').innerText = title;
             template.querySelector('.card-text').innerText = text;
-            
-            document.querySelector('#card-list').appendChild(template);
-            }
 
-        addCard('Dynamic Card', 'Added card');
-    </script>        
+            document.querySelector('#card-list').appendChild(template);
+        }
+
+        addCard('Card 1');
+        addCard('Card 2');
+    </script>
+    <h1>Van Gogh Portfolio</h1>
+    <div id="portfolioContainer"></div>
+    <script src="index.js"></script>
 </body>
 </html>
