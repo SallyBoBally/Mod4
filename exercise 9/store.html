@@ -8,32 +8,29 @@
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
 </head>
 <body>
-    <!-- Prepare a DOM with a defined width and height for ECharts -->
     <div id="main" style="width: 900px;height:600px;"></div>
     <script type="text/javascript">
-    // Specify the configuration items and data for the chart
         let options = {
             title: { text: 'Fake Store Categories' },
             xAxis: {
-                data: ['Category 1', 'Category 2', 'Category 3', 'Category 4']
+                data: ['electronics', 'jewelry', 'mens clothing', 'womens clothing', 'kids clothing']
         },
         yAxis: {},
         series: [{
             name: '# products',
             type: 'bar',
-            data: [0, 1, 5, 2]
+            data: [1, 2, 3, 4, 5, 3]
         }]
     };
+    
     fetch('https://fakestoreapi.com/products')
         .then((response) => response.json())
         .then((json) => {
             console.log(json)
-            // use this JSON to find and set correct option data for the chart
         })
         .then(() => {
             myChart.setOption(options);
         })
-        // Initialize the echarts instance based on the prepared div
         let myChart = echarts.init(document.getElementById('main'));
     </script>
 </body>

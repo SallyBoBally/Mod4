@@ -1,17 +1,25 @@
-.slider-box {
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* Initial background color */
+    overflow: hidden;
+}
+  
+  #container {
     position: relative;
     width: 100px;
-    height: 400px;
+    height: 300px;
     overflow: hidden;
-    border-radius: 10px;
-    border: 2px solid #ccc;
 }
-
-.slider {
+  
+  #square {
     position: absolute;
     width: 100px;
     height: 100px;
-    background-color: #ff0000;
-    border-radius: 5px;
-    transition: background-color 1s linear;
+    background-color: red;
+    top: 0;
 }
